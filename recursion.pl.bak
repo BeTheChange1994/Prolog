@@ -1,0 +1,7 @@
+parent(jim, pat).
+parent(pat, ann).
+parent(ann, bob).
+parent(bob, pam).
+
+ancestor(X, Z):- parent(X, Z).
+ancestor(X, Z):- parent(X, Y), ancestor(Y, Z).

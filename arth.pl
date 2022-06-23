@@ -1,0 +1,13 @@
+int(X, Y) :- 
+	
+    count(X, Y, Y).
+
+count(X, Y, Counter) :-  
+    Counter =< X,          
+    writeln(Counter),      
+    
+    Next is Counter + Y,   
+    count(X, Y, Next).   
+
+count(X, _, Counter) :-  
+    Counter > X.           

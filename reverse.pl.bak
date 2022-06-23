@@ -1,0 +1,4 @@
+reverse([H|T], ReversedList):-
+	reverseAcc(T, [H], ReversedList).
+	
+reverseAcc([], Acc, Acc).
